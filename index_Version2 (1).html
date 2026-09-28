@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dubai Couple Itinerary</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="shell">
+        <header class="topbar">
+          <div class="brand">
+            <div class="logo">✈</div>
+            Dubai
+          </div>
+          <div class="mode-toggle">
+            <span class="dot"></span>
+            <span id="modeLabel">Admin</span>
+          </div>
+        </header>
+
+        <main class="content">
+          <section class="hero">
+            <p class="eyebrow">Trip overview</p>
+            <h1 id="tripTitle">Dubai Escape</h1>
+            <div class="subhead" id="tripSummary">
+              A relaxed, luxe Dubai getaway for two with dessert dunes, waterfront evenings, and a slow-burn city stay.
+            </div>
+
+            <div class="hero-meta">
+              <span class="chip" id="tripDates">Mar 15 – Mar 21</span>
+              <span class="chip" id="travelerNames">Alicia & Omar</span>
+              <span class="chip">Couple trip</span>
+            </div>
+
+            <div class="summary-grid">
+              <div class="metric">
+                <strong id="stayNights">6</strong>
+                <span>Nights</span>
+              </div>
+              <div class="metric">
+                <strong id="dayCount">7</strong>
+                <span>Days</span>
+              </div>
+              <div class="metric">
+                <strong id="budgetTotal">$4,750</strong>
+                <span>Budget</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-header">
+              <h2>Plan</h2>
+              <span class="linkish" id="shareHint">Share-ready</span>
+            </div>
+            <div id="dayTabs" class="day-tabs" aria-label="Day tabs"></div>
+          </section>
+
+          <section class="section">
+            <div class="timeline" id="timeline"></div>
+          </section>
+
+          <section class="card-grid">
+            <div class="card">
+              <h3>Flights</h3>
+              <div class="stack" id="flightCard"></div>
+            </div>
+
+            <div class="card">
+              <h3>Hotel stay</h3>
+              <div class="stack" id="hotelCard"></div>
+            </div>
+
+            <div class="card">
+              <h3>Airport transfer</h3>
+              <div class="stack" id="transferCard"></div>
+            </div>
+
+            <div class="card">
+              <h3>Visa & documents</h3>
+              <ul class="doc-list" id="documentList"></ul>
+            </div>
+
+            <div class="card">
+              <h3>Booking links</h3>
+              <div class="booking-list" id="bookingList"></div>
+            </div>
+
+            <div class="card">
+              <h3>Budget</h3>
+              <ul class="budget-list" id="budgetList"></ul>
+              <div class="budget-total">
+                <strong>Total spent</strong>
+                <span class="amount" id="budgetAmount">$0</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section admin-panel" id="adminPanel">
+            <div class="section-header">
+              <h2>Admin controls</h2>
+              <span class="linkish" id="shareLinkLabel">Public guest link</span>
+            </div>
+
+            <div class="admin-form">
+              <div class="field">
+                <label for="itemDay">Day</label>
+                <select id="itemDay"></select>
+              </div>
+
+              <div class="field">
+                <label for="itemTime">Time</label>
+                <input id="itemTime" type="text" value="09:00" />
+              </div>
+
+              <div class="field">
+                <label for="itemTitle">Title</label>
+                <input id="itemTitle" type="text" placeholder="Burj Khalifa sunset visit" />
+              </div>
+
+              <div class="field">
+                <label for="itemDescription">Description</label>
+                <textarea id="itemDescription" placeholder="Take the elevator to Level 148 and enjoy a sunset skyline view."></textarea>
+              </div>
+
+              <div class="field">
+                <label for="itemCategory">Category</label>
+                <select id="itemCategory">
+                  <option value="flight">Flight</option>
+                  <option value="hotel">Hotel</option>
+                  <option value="tour">Tour</option>
+                  <option value="food">Food</option>
+                  <option value="transfer">Transfer</option>
+                  <option value="visa">Visa</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="itemLocation">Location</label>
+                <input id="itemLocation" type="text" placeholder="Downtown Dubai" />
+              </div>
+
+              <div class="field">
+                <label for="itemLink">Link</label>
+                <input id="itemLink" type="url" placeholder="https://" />
+              </div>
+
+              <div class="field">
+                <label for="itemStatus">Status</label>
+                <select id="itemStatus">
+                  <option value="booked">Booked</option>
+                  <option value="planned">Planned</option>
+                  <option value="done">Done</option>
+                </select>
+              </div>
+
+              <div class="btn-row">
+                <button class="btn primary" id="saveItemBtn" type="button">Add itinerary item</button>
+                <button class="btn secondary" id="generateLinkBtn" type="button">Generate guest link</button>
+              </div>
+            </div>
+          </section>
+
+          <p class="guest-note hidden" id="guestNote">
+            Guest view only — no login required. Sharing the public link will keep the itinerary read-only.
+          </p>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
